@@ -1,5 +1,7 @@
 //букмекерская контора BetArystan
 
+import { countProfit } from "./profit.js"
+
 let player = {
     name: String,
     balance: int,
@@ -71,7 +73,7 @@ function makeBet(player, result,  ...events) {
     console.log("your balance:", player.balance)
 
     if (player.balance > 5000) {
-        console.log("WOW! LOOKS LIKE YOU HAVE DOUBLED YOUR INITIAL BALANCE")
+        console.log(`WOW! LOOKS LIKE YOU HAVE INCREASED YOUR INITIAL BALANCE BY ${countProfit(player)}`)
     }
 }
 
